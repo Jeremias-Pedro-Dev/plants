@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+section {
+    padding: 10px 5%;
+}
+
+:root {
+    --primary: #2a5c3f;
+    --secundary: #fdfbf4;
+    --titulo: #035703;
+    --corbtn:#14ad14;
+    --corboder: #ccc;
+    --tituloSize: clamp(1.5rem, 4vw, 3rem);
+    --textoDescription: clamp(0.875rem, 1.5vw, 1.125rem);
+}
+
+body {
+    background-color: var(--secundary);
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.1);
+    z-index: 100;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+header .navbar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+header #navbarList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+header .item {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+}
+header .item::after{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 0;
+    transition: .3s ease-in-out;
+    bottom: -3px;
+    left: 0;
+    border-radius: 10px;
+    height: 4px;
+    background-color:var(--corbtn);
+}
+header .item:hover::after{
+    width: 100%;
+}
+.headerBtn {
+    display: flex;
+    align-items: center;
+    gap: 49px;
+    justify-content: space-between;
+}
+
+.headerBtn .btnHeader {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--corboder);
+}
+
+.headerBtn .btnHeader::after {
+    content: "";
+    position: absolute;
+    background-color: var(--corbtn);
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    top: 0;
+    border-radius: 5px;
+    left: 0;
+    transition: .6s ease-in-out;
+}
+
+.headerBtn .btnHeader:hover::after {
+    width: 100%;
+}
+
+#home {
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.boxdescription {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Titulo {
+    color: var(--titulo);
+    font-weight: bold;
+    font-size: var(--tituloSize);
+}
+
+.Titulo span {
+    color: #000;
+}
+
+.boxdescription p {
+    font-size: var(--textoDescription);
+}
+.sectionBtn{
+    display: flex;
+    width: 100%;
+    margin: 19px 0;
+    justify-content: start;
+    align-items: center;
+}
+.sectionBtn .btnSection{
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 240px;
+    position: relative;
+    font-size: 1.1rem;
+    border: 1px solid var(--corbtn);
+    background-color: transparent;
+    box-shadow: 0 10px 12px rgb(0, 0, 0, 0.1);
+}
+.sectionBtn .btnSection::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transition: .5s ease-in-out;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background-color: var(--corbtn);
+}
+.sectionBtn .btnSection:hover::after{
+    width: 0;
+}
+.imagePlanta {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    width: 75%;
+    position: relative;
+}
+
+.imagePlanta img {
+    width: fit-content;
+}
+
+.decoracao {
+    position: absolute;
+    top: 99px;
+    right: 100px;
+    background-color: #f5e8c5;
+    /*bege*/
+    width: 280px;
+    height: 280px;
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    /* forma irregular */
+    z-index: -1;
+}
+
+.bolinha {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #2e7d32;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.bolinha1 {
+    top: 60%;
+    left: 49%;
+}
+
+.bolinha2 {
+    top: 40%;
+    background-color: forestgreen;
+    right: 15%;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    margin:19% 0;
+    min-height: 100vh;
+}
+.service h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 90px 0;
+}
+.cardes{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.description h3{
+    text-align: center;
+    margin: 14px 0;
+}
