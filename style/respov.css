@@ -1,0 +1,124 @@
+@media screen and (max-width:850px) {
+header  #navbarList{
+        display: none;
+    }
+    header{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .menu{
+        display: block;
+    }
+    #navbarListMobile{
+        display: flex;
+    }
+}
+.itemMobile{
+    color: #fff;
+}
+@media screen and (max-width:1091px) {
+    #home{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .boxdescription{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.sectionBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagePlanta{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.bolinha{
+    display: none;
+}
+.decoracao{
+    display: none;
+}
+#sobre{
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.descriptionSobre{
+    width: 100%;
+    justify-content: center;
+    justify-content: center;
+}
+.image_sobre{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.image_sobre img{
+    width: 70%;
+}
+
+}
+#navbarListMobile{
+    position: fixed;
+    height: 100vh;
+    left: -500px;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+     background:rgb(80, 79, 79);
+    width: 300px;
+}
+#navbarListMobile .itemList{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbarListMobile.activar{
+    left: 0;
+}
+
+@media screen and (max-width:360px) {
+    .boxForm{
+        width: 300px;
+        margin: 7% auto;
+    }
+    .boxinput input{
+        width: 270px;
+        margin-right: 20px;
+    }
+    .btnsenha{
+        right: 34px;
+    }
+    .boxformBtn button{
+        width: 270px;
+    }
+    .boxformBtn{
+        padding-right: 25px;
+    }
+
+    #form2.form2 {
+    transform: translateX(-132px);
+    transition: .3s;
+}
+    #navbarListMobile{
+        width: 250px;
+    }
+}
+@media screen and (max-width:800px) {
+    .service{
+        padding: 0 2%;
+    }
+    
+}

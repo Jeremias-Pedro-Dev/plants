@@ -1,188 +1,336 @@
-<!DOCTYPE html>
 <html lang="pt-pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="image/logo.png" alt="logo" />
-      </div>
-      <nav class="navbar">
-        <ul id="navbarList">
-          <li class="itemList">
-            <a href="#" class="item">Início</a>
-          </li>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePlants</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/respov.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="/image/logo.png" alt="logo"/>
+        </div>
+        <nav class="navbar">
+          <ul id="navbarList">
+            <li class="itemList">
+              <a href="#home" class="item"><h4>Início</h4></a>
+            </li>
+  
+            <li class="itemList">
+              <a href="#service" class="item"><h4>Serviço</h4></a>
+            </li>
+  
+            <li class="itemList">
+              <a href="#sobre" class="item"><h4>Sobre nós</h4></a>
+            </li>
+  
+            <li class="itemList">
+              <a href="#contacto" class="item"><h4>Contacto</h4></a>
+            </li>
+          </ul>
 
-          <li class="itemList">
-            <a href="#" class="item">Serviço</a>
-          </li>
-
-          <li class="itemList">
-            <a href="#" class="item">Sobre nós</a>
-          </li>
-
-          <li class="itemList">
-            <a href="#" class="item">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="headerBtn">
-        <button class="btnHeader">Entrar</button>
-        <!--
-        Botão de menu
-        <button class="menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        -->
-      </div>
-    </header>
-    <!--Section home-->
+            <ul id="navbarListMobile">
+            <li class="itemList">
+              <a href="#home" class="itemMobile"><h4>Início</h4></a>
+            </li>
+  
+            <li class="itemList">
+              <a href="#service" class="itemMobile"><h4>Serviço</h4></a>
+            </li>
+  
+            <li class="itemList">
+              <a href="#sobre" class="itemMobile"><h4>Sobre nós</h4></a>
+            </li>
+  
+            <li class="itemList">
+              <a href="#contacto" class="itemMobile"><h4>Contacto</h4></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="headerBtn">
+         <button class="btnHeader"><b><h4>Entrar</h4></b></button>
+            <button class="menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </header>  
+<div class="centro">
+<div class="top_centro">
     <section id="home">
-      <div class="boxdescription">
-        <h1 class="Titulo">
-          <span>Nursery Shopping</span> Cultive Beleza, Respire Natureza
-        </h1>
-        <p>
-          Mesmo no silêncio dos desertos interplantários, a vida encontra um
-          jeito. Conheça planetas onde o impossível floresce.
-        </p>
-        <div class="sectionBtn">
-          <button class="btnSection">Ver mais</button>
+        <div class="boxdescription">
+          <h1 class="Titulo">
+            <span>Nursery Shopping</span> Cultive Beleza, Respire Natureza
+          </h1>
+          <hr><br>
+         
+            <p>
+                Mesmo no silêncio dos desertos interplantários, a vida encontra um
+                jeito. Conheça planetas onde o impossível floresce.
+              </p>
+ 
+          </span>
+          <div class="sectionBtn">
+            <button class="btnSection"><h4><b>Ver Mais</b></h4></button>
+          </div>
         </div>
-      </div>
-      <div class="imagePlanta">
-        <div class="decoracao"></div>
-        <div class="bolinha bolinha1"></div>
-        <div class="bolinha bolinha2"></div>
-
-        <img src="image/banner.png" alt="" />
-      </div>
-    </section>
+        <div class="imagePlanta">
+          <div class="decoracao"></div>
+          <div class="bolinha bolinha1"></div>
+          <div class="bolinha bolinha2"></div>
+  
+          <img src="../image/banner.png"/>
+        </div>
+      </section>
+</div class="top_centro">
+<br>
+<div class="meio">
     <!--Section serviço-->
-    <section class="service">
-      <h2>Serviço</h2>
-      <div class="cardes">
-        <div class="card">
-          <div class="image">
-            <img src="image/planta1.png" alt="planta" />
-          </div>
-          <div class="description">
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus. Libero ali
-            </p>
-          </div>
-          <!--
-            <div class="cardbtn">
-              <button class="btnCard">Comprar</button>
+    <section class="service" id="service">
+        <h2>Serviço</h2>
+        <div class="cardes">
+          <div class="card">
+            <div class="image">
+              <img src="../image/planta1.png" alt="planta" />
             </div>
-             -->
+            <div class="description">
+              <h3>Titulo</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
+                ducimus. Libero ali
+              </p>
+            </div>
+            <!--
+              <div class="cardbtn">
+                <button class="btnCard">Comprar</button>
+              </div>
+               -->
+          </div>
+  
+          <div class="card">
+            <div class="image">
+              <!--Substitua por outra imagem-->
+              <img src="image/planta1.png" alt="planta" />
+            </div>
+            <div class="description">
+              <h3>Titulo</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
+                ducimus. Libero ali
+              </p>
+            </div>
+            <!--
+              <div class="cardbtn">
+                <button class="btnCard">Comprar</button>
+              </div>
+               -->
+          </div>
+  
+          <div class="card">
+            <div class="image">
+              <!--Substitua por outra imagem-->
+              <img src="image/planta1.png" alt="planta" />
+            </div>
+            <div class="description">
+              <h3>Titulo</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
+                ducimus. Libero ali
+              </p>
+            </div>
+            <!--
+              <div class="cardbtn">
+                <button class="btnCard">Comprar</button>
+              </div>
+               -->
+          </div>
+  
+          <div class="card">
+            <div class="image">
+              <!--Substitua por outra imagem-->
+              <img src="image/planta1.png" alt="planta" />
+            </div>
+            <div class="description">
+              <h3>Titulo</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
+                ducimus. Libero ali
+              </p>
+            </div>
+            <!--
+              <div class="cardbtn">
+                <button class="btnCard">Comprar</button>
+              </div>
+               -->
+          </div>
+  
+          <div class="card">
+            <div class="image">
+              <!--Substitua por outra imagem-->
+              <img src="image/planta1.png" alt="planta" />
+            </div>
+            <div class="description">
+              <h3>Titulo</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
+                ducimus. Libero ali
+              </p>
+            </div>
+            <!--
+              <div class="cardbtn">
+                <button class="btnCard">Comprar</button>
+              </div>
+               -->
+          </div>
+  
+          <div class="card">
+            <div class="image">
+              <!--Substitua por outra imagem-->
+              <img src="image/planta1.png" alt="planta" />
+            </div>
+            <div class="description">
+              <h3>Titulo</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
+                ducimus. Libero ali
+              </p>
+            </div>
+            <!--
+              <div class="cardbtn">
+                <button class="btnCard">Comprar</button>
+              </div>
+               -->
+          </div>
         </div>
+      </section>
+      
+</div>
+<div class="baixo">
 
-        <div class="card">
-          <div class="image">
-            <!--Substitua por outra imagem-->
-            <img src="image/planta1.png" alt="planta" />
-          </div>
-          <div class="description">
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus. Libero ali
-            </p>
-          </div>
-          <!--
-            <div class="cardbtn">
-              <button class="btnCard">Comprar</button>
-            </div>
-             -->
+</div>
+
+</div class="centro">
+<section id="sobre">
+  <div class="descriptionSobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      Somos apaixonados pro plantas e acreditamos que a natureza tem o poder de transformar ambientes. Nosso objectivo é aproximar as pessoas do verde, oferecendo plantas de qualidade e dicas de cuidados para que cada espaço se trone mais vivo, acolhedor e sustentável.
+    </p>
+     <div class="sectionBtn">
+            <button class="btnSection"><h4><b>Saiba Mais</b></h4></button>
+          </div>    
+  </div>
+
+    <div class="image_sobre">
+      <img src="/image/personPlant.png" alt="">
+    </div>
+</section>
+<div class="sombra">
+  <div class="boxForm">
+    <form action="#">
+     
+      <div class="form" id="form1">
+        <div class="boxinput">
+          <label for="email">
+            <p>E-mail</p>
+            <input type="email" id="email" placeholder="jane.doe@gmail.com" required ></label>
         </div>
-
-        <div class="card">
-          <div class="image">
-            <!--Substitua por outra imagem-->
-            <img src="image/planta1.png" alt="planta" />
-          </div>
-          <div class="description">
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus. Libero ali
-            </p>
-          </div>
-          <!--
-            <div class="cardbtn">
-              <button class="btnCard">Comprar</button>
-            </div>
-             -->
+        <div class="boxinput">
+          <label for="email">
+            <p>Senha</p>
+            <input type="password" id="email" placeholder="Senha" required >
+            <button class="btnsenha" required ><i class="fa-solid fa-eye-slash"></i></button>
+          </label>
         </div>
-
-        <div class="card">
-          <div class="image">
-            <!--Substitua por outra imagem-->
-            <img src="image/planta1.png" alt="planta" />
-          </div>
-          <div class="description">
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus. Libero ali
-            </p>
-          </div>
-          <!--
-            <div class="cardbtn">
-              <button class="btnCard">Comprar</button>
-            </div>
-             -->
+        <div class="boxinput">
+          <label for="senha">
+            <p>Confirmar Senha</p>
+            <input type="password" id="senha" placeholder="Confirmar Senha" required >
+            <button class="btnsenha" ><i class="fa-solid fa-eye-slash"></i></button>
+          </label>
         </div>
-
-        <div class="card">
-          <div class="image">
-            <!--Substitua por outra imagem-->
-            <img src="image/planta1.png" alt="planta" />
-          </div>
-          <div class="description">
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus. Libero ali
-            </p>
-          </div>
-          <!--
-            <div class="cardbtn">
-              <button class="btnCard">Comprar</button>
-            </div>
-             -->
+        <div class="boxformBtn">
+          <button class="btnLogin" id="buttoncriar">
+            Criar
+        </button>
         </div>
-
-        <div class="card">
-          <div class="image">
-            <!--Substitua por outra imagem-->
-            <img src="image/planta1.png" alt="planta" />
-          </div>
-          <div class="description">
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus. Libero ali
-            </p>
-          </div>
-          <!--
-            <div class="cardbtn">
-              <button class="btnCard">Comprar</button>
-            </div>
-             -->
+        <div class="resgit">
+          <a href="#" class="btnCriarConta" >Já tenho conta</a>
         </div>
       </div>
-    </section>
-    
-    <footer>
+    </form>
 
-    </footer>
-  </body>
+        <form action="#">
+         
+      <div class="form" id="form2">
+        <div class="boxinput">
+          <label for="email">
+            <p>E-mail</p>
+            <input type="email" id="email" placeholder="jane.doe@gmail.com" required  ></label>
+        </div>
+        <div class="boxinput">
+          <label for="senha">
+            <p>Palavra-pass</p>
+            <input type="password" id="senha" placeholder="Senha" required  >
+            <button class="btnsenha" ><i class="fa-solid fa-eye-slash"></i></button>
+          </label>
+        </div>
+        <div class="boxformBtn">
+          <button class="btnLogin" id="buttonEntrar"> 
+          Entrar
+        </button>
+        </div>
+        <div class="resgit">
+          <a href="#">Esqueste-te da senha?</a>
+          <a href="#" class="btnCriarConta" >Não tenho conta</a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="loader"></div>
+</div>
+
+  
+<footer id="contacto">
+  <div class="boxFooter">
+    <div class="cardesFooter">
+      <div class="cardFooter">
+        <div class="logo">
+          Nursery Shopping
+        </div>
+          <p>Precisa de ajuda com algo?</p>
+          <div class="redesSociais">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="cardFooter">
+        <p>Navegação rápida</p>
+        <ul>
+          <li><a href="#home">início</a></li>
+          <li><a href="#service">Serviço</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="cardFooter">
+        <h3>NewsLestter</h3>
+        <div class="input">
+          <input type="email" name="inputEmail" id="inputEmail" placeholder="Seu e-mail">
+         <button class="btnHeader" id="btnFooter"><b><h4>inscrever</h4></b></button>
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="linhaFooter"></div>
+  <p class="copy">&copy;
+  <span class="ano"></span> Todos os direitos reservados.
+  </p>
+</footer>
+<script src="js/inicio.js"></script>
+</body>
 </html>

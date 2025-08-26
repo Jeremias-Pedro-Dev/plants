@@ -6,24 +6,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-}
-section {
-    padding: 10px 5%;
-}
 
-:root {
+/*:root {
     --primary: #2a5c3f;
     --secundary: #fdfbf4;
     --titulo: #035703;
     --corbtn:#14ad14;
-    --corboder: #ccc;
+    --corboder: #ccc;*
     --tituloSize: clamp(1.5rem, 4vw, 3rem);
     --textoDescription: clamp(0.875rem, 1.5vw, 1.125rem);
+}*/
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 10px 5%;
 }
 
 body {
+    position: relative;
     background-color: var(--secundary);
     line-height: 1.5;
 }
@@ -31,20 +33,23 @@ body {
 header {
     display: flex;
     padding: 0 5%;
+    align-items: center;
+    /*background-color: var(--primary);*/
+    background: rgb(80, 79, 79);
+    width: 100%;
+}
+.header.fixar{
     position: sticky;
     top: 0;
     box-shadow: 0 2px 8px rgb(0, 0, 0, 0.1);
     z-index: 100;
-    align-items: center;
-    background-color: var(--primary);
 }
-
 .logo {
-    width: 10%;
+    width: 14%;
 }
 
 .logo img {
-    width: 100%;
+    width: 100px;
 }
 
 header .navbar {
@@ -67,7 +72,8 @@ header .item {
     font-weight: bold;
     position: relative;
 }
-header .item::after{
+
+header .item::after {
     content: "";
     display: flex;
     align-items: center;
@@ -79,52 +85,67 @@ header .item::after{
     left: 0;
     border-radius: 10px;
     height: 4px;
-    background-color:var(--corbtn);
+    background-color: var(--corbtn);
 }
-header .item:hover::after{
+
+header .item:hover::after {
     width: 100%;
 }
+
+.menu {
+    background-color: transparent;
+    border: none;
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnHeader {
+    font-size: medium;
+    padding: 2px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnHeader:hover {
+    transition: 2s ease-in-out;
+    background: green;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+
+}
+
 .headerBtn {
     display: flex;
-    align-items: center;
-    gap: 49px;
-    justify-content: space-between;
+    gap: 30px;
 }
 
-.headerBtn .btnHeader {
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    color: #fff;
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
-    border: 1px solid var(--corboder);
-}
-
-.headerBtn .btnHeader::after {
-    content: "";
-    position: absolute;
-    background-color: var(--corbtn);
-    height: 100%;
-    width: 0;
-    z-index: -1;
-    top: 0;
-    border-radius: 5px;
-    left: 0;
-    transition: .6s ease-in-out;
-}
-
-.headerBtn .btnHeader:hover::after {
+/*.headerBtn .btnHeader:hover::after {
     width: 100%;
+}*/
+.centro {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.top_centro {
+    display: flex;
+    flex-direction: row;
+
+
 }
 
 #home {
     display: flex;
     min-height: 100vh;
-    justify-content: space-between;
 }
 
 .boxdescription {
@@ -135,9 +156,9 @@ header .item:hover::after{
 }
 
 .Titulo {
-    color: var(--titulo);
+    color: #035703;
     font-weight: bold;
-    font-size: var(--tituloSize);
+    font-size: medium 3rem;
 }
 
 .Titulo span {
@@ -147,26 +168,31 @@ header .item:hover::after{
 .boxdescription p {
     font-size: var(--textoDescription);
 }
-.sectionBtn{
+
+.sectionBtn {
     display: flex;
     width: 100%;
     margin: 19px 0;
     justify-content: start;
     align-items: center;
 }
-.sectionBtn .btnSection{
+
+.sectionBtn .btnSection {
     padding: 10px 12px;
     border: none;
     cursor: pointer;
     border-radius: 12px;
-    width: 240px;
+    width: 200px;
     position: relative;
     font-size: 1.1rem;
     border: 1px solid var(--corbtn);
     background-color: transparent;
-    box-shadow: 0 10px 12px rgb(0, 0, 0, 0.1);
+    /*Neumorfismos é uma técnica de design que simula profundida
+    de suave usando sombras claras e escuras. (box-shadow) */
+    box-shadow: 0 10px 12px rgb(0, 0, 0, 0.3);
 }
-.sectionBtn .btnSection::after{
+
+.sectionBtn .btnSection::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -179,17 +205,22 @@ header .item:hover::after{
     align-items: center;
     justify-content: center;
     border-radius: 11px;
-    background-color: var(--corbtn);
+    background-color: green;
 }
-.sectionBtn .btnSection:hover::after{
+
+.sectionBtn .btnSection:hover::after {
     width: 0;
+    transition: 3s ease-in-out;
+    background: yellow;
 }
+
 .imagePlanta {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: end;
     width: 75%;
     position: relative;
+    margin-left: 210px;
 }
 
 .imagePlanta img {
@@ -207,6 +238,11 @@ header .item:hover::after{
     border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
     /* forma irregular */
     z-index: -1;
+}
+
+.meio {
+
+    width: 100%;
 }
 
 .bolinha {
@@ -228,29 +264,339 @@ header .item:hover::after{
     background-color: forestgreen;
     right: 15%;
 }
-.service{
+
+.service {
     display: flex;
     flex-direction: column;
-    margin:19% 0;
     min-height: 100vh;
 }
-.service h2{
+
+.service h2 {
     text-align: center;
     font-size: 2rem;
     margin: 90px 0;
+    color: #2e7d32;
 }
-.cardes{
+
+.cardes {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.card{
+
+.card {
+    display: flex;
+    text-align: center;
+    font-size: medium;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    border-radius: 30px;
+    border: 2px solid #00411F;
+    /*Neumorfismos é uma técnica de design que simula profundida
+    de suave usando sombras claras e escuras. (box-shadow) */
+    box-shadow: 0 10px 12px rgb(0, 0, 0, 0.2), 0 10px 12px rgb(0, 0, 0, 0.2);
+    padding: 4px;
+    background: #00411F;
+    color: white;
+}
+
+.card:hover {
+    transition: 2s ease-in-out;
+    background: rgb(24, 173, 10);
+    cursor: pointer;
+    border: none;
+    color: black;
+
+}
+
+.description h3 {
+    text-align: center;
+    margin: 14px 0;
+}
+
+#sobre {
+    margin-top: 19%;
+    margin-bottom: 25%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    min-height: 100vh;
+}
+
+#sobre h2 {
+    margin: 30px 0;
+    font-size: 2rem;
+    color: #2e7d32;
+}
+
+.descriptionSobre {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#sobre .sectionBtn {
+    margin-top: 30px;
+}
+
+footer {
+    color: #ffff;
+    background-color: #000000;
+}
+
+footer .logo {
+    width: 50%;
+}
+
+.cardesFooter {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.boxFooter {
+    padding: 22px 1%;
+
+}
+
+.cardFooter {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.description h3{
+
+.cardFooter .logo {
     text-align: center;
-    margin: 14px 0;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cardFooter li {
+    margin: 24px;
+}
+
+.cardFooter a {
+    color: #fff;
+}
+
+.input {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input button {
+    margin-top: 30px;
+
+}
+
+.input input::placeholder {
+    color: #000;
+}
+
+.redesSociais {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.redesSociais a {
+    font-size: 1.3rem;
+}
+
+#btnFooter {
+    background-color: #2e7d32;
+    border-radius: 22px;
+    width: 200px;
+}
+
+.input input {
+    border-radius: 22px;
+    width: 270px;
+    height: 45px;
+    color: #000;
+    border: none;
+    padding: 5px 9px;
+}
+
+.linhaFooter {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.copy {
+    padding: 14px 0;
+    text-align: center;
+}
+
+.boxForm {
+    position: absolute;
+    top: 2%;
+    z-index: 9;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding-top: 40px;
+    width:400px;
+    padding-bottom: 40px;
+    overflow: hidden;
+    background-color: #ffff;
+    border-radius: 12px;
+}
+
+.resgit {
+    display: flex;
+    gap: 20px;
+}
+
+#form2 {
+    transform: translateX(200px);
+}
+
+#form1 {
+    transform: translateX(160px);
+}
+
+#form1.form1 {
+    transform: translateX(-200px);
+    transition: .3s;
+}
+
+#form2.form2 {
+    transform: translateX(-160px);
+    transition: .3s;
+}
+
+.tituloForm {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: c;
+    margin-bottom: 5px;
+}
+
+.boxinput {
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxinput input {
+    width: 320px;
+    padding: 0 9px;
+    height: 45px;
+    border: 2px solid #00411F;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxinput input::placeholder {
+    font-size: 17px;
+    color: #000;
+}
+
+.btnsenha {
+    border: none;
+    position: absolute;
+    right: 10px;
+    bottom: 17px;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+label p {
+    margin-bottom: 10px;
+}
+
+.boxformBtn {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxformBtn button {
+    width: 300px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border: none;
+    background-color: #2e7d32;
+    color: #fff;
+    transition: .3s;
+    border-radius: 22px;
+}
+
+.boxformBtn button:hover {
+    background-color: #005705;
+    cursor: pointer;
+}
+
+.sombra {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    background-color: #332f2f48;
+    backdrop-filter: blur(20px);
+}
+
+.btnLogin {
+    height: 45px;
+}
+
+.boxLoader{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    background-color: #332f2f48;
+    backdrop-filter: blur(20px);
+}
+.loader{
+    height: 100px;
+    width: 100px;
+    display: none;
+    margin: auto;
+    border-radius: 50%;
+    animation: loade .9s infinite linear ;
+    border: 15px dotted #2e7d32;
+}
+
+@keyframes loade {
+    100%{
+        
+        transform: rotate(360deg);
+    }
 }
